@@ -1,4 +1,5 @@
 #include "WallpapersFrame.h"
+#include "ColorSettings.h"
 
 #include <wx/wxprec.h>
 
@@ -23,12 +24,14 @@ enum {
 
 bool WP_ManagerApp::OnInit() {
     wxInitAllImageHandlers();
+    ColorSettings::LoadCurrentColorMode();
+    CreateFolder("data");
 
-    auto *frame = new WallpapersFrame(nullptr, ID_LIST, "Wallpaper Manager", wxPoint(50, 50), wxSize(800, 600));
+    auto *frame = new WallpapersFrame(nullptr, wxID_ANY, "Wallpaper Manager", wxPoint(50, 50), wxSize(800, 600));
 
-    frame->Show(true);
+    frame->LoadWallpapers();
 
-    frame->UpdateImages();
+    frame->Show();
 
     return true;
 }
