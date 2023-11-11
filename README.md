@@ -8,6 +8,9 @@ Download the release .zip [here](https://github.com/YoshiLeLama/wp_manager/relea
 
 ## Usage
 You can add or remove an empty collection of wallpaper images using the buttons next to the category choice.
+
 You can add images to the collection using File > Add Files (or CTRL+O).
+
 You can select an image by clicking on it, or multiple images by holding CTRL and clicking on them.
+
 You can delete selected images from the collection by using Select > Delete selected files (or Del).
